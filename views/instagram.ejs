@@ -1,0 +1,37 @@
+<%- include("include/head.ejs") %>
+
+    <body>
+
+        <div class="container">
+            <h1>Welcome to the page of @<%= data.name %>
+            </h1>
+            <div class="button">
+                <button>Follow</button>
+                <button>Messege</button>
+            </div>
+    
+            <div class="FF">
+                <p>Posts : 8 &nbsp;&nbsp;&nbsp;&nbsp;Followers : <%= data.followers %> &nbsp;&nbsp;&nbsp;&nbsp;Following : <%= data.following %>
+                </p>
+            </div>
+    
+            <hr>
+    
+            <div class="all-post">
+                <% for(let post of data.posts) { %>
+    
+                    <div class="post">
+                        <img src="<%= post.image %>" alt="some img">
+                        <p>Likes : <%= post.likes %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Comments : <%= post.comments %>
+                        </p>
+                    </div>
+        
+                <% } %>
+            </div>
+        </div>
+
+        <%- include("include/footer.ejs") %>
+        
+    </body>
+
+    </html>

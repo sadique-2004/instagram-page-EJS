@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rolldice</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Your rolldice is : <%= database %>
+    </h1>
+
+    <% if (database==6) { %>
+
+        <h2>Nice ! Roll dice again</h2>
+
+        <% } %>
+
+</body>
+
+</html>
